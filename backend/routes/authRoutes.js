@@ -28,7 +28,7 @@ router.post('/createuser',
             const salt = await bcrypt.genSalt(10);
             const secPassword = await bcrypt.hash(password, salt);
             user  = new User({ name, email, password: secPassword });
-            await user.save()
+            await user.save();
             // Signing a token using jwt
             const data = {
                 user: {
