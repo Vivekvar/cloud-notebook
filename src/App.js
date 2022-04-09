@@ -8,13 +8,15 @@ import {
 import Home from './components/Home';
 import About from './components/About';
 import NoteState from './context/notes/NoteState';
+import Alert from './components/Alert';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <NoteState>
         <Router>
           <Navbar/>
+          <Alert message="I love you!" />
           <div className="container">
             <Switch>
               <Route exact path="/">
